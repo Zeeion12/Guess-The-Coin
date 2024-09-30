@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Coin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="game-container">
+        <h1>Guess the coin!!!</h1>
+
+        <!-- Coin section -->
+        <div class="coin" id="coin">
+            <div class="side heads">HEADS</div>
+            <div class="side tails">TAILS</div>
+            <div id="overlay"></div>
+        </div>
+        
+        
+
+        <button id="flip-button">Flip Koin</button>
+
+        <!-- Guess Section -->
+        <div id="guess-container">
+            <h2>Tebak Koin: </h2>
+            <button id="guess-heads">Kepala</button>
+            <button id="guess-tails">Ekor</button>
+        </div>
+
+        <p id="message"></p>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
