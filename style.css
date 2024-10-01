@@ -21,7 +21,7 @@ body {
 }
 
 h1, h2{
-    color: black;
+    color: white;
 }
 
 #video-background {
@@ -42,7 +42,7 @@ h1, h2{
 
 
 .game-container {
-    background-color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.442);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
@@ -65,9 +65,9 @@ h1, h2{
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
-    width: 250px;
-    height: 250px;
-    background-color: black;
+    width: 252px;
+    height: 254px;
+    background-color: white;
     color: white;
     display: flex;
     align-items: center;
@@ -107,7 +107,7 @@ h1, h2{
 #message {
     font-size: 20px;
     margin-top: 20px;
-    color: black;
+    color: white;
 }
 
 button {
