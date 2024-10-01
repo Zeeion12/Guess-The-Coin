@@ -52,7 +52,7 @@ function checkGuess(guess) {
     if (flipCount === 3) {
         // Tampilkan jumpscare video pada percobaan ke-3
         const jumpscareVideo = document.createElement("video");
-        jumpscareVideo.src = "Sesuatu.mp4";
+        jumpscareVideo.src = "Jumps.mp4";
         jumpscareVideo.style.position = "fixed";
         jumpscareVideo.style.top = "0";
         jumpscareVideo.style.left = "0";
@@ -68,7 +68,7 @@ function checkGuess(guess) {
             document.body.removeChild(jumpscareVideo);
             flipCount = 0;  // Reset permainan
             message.textContent = "";
-        }, 8000);  // Durasi jumpscare 8 detik
+        }, 6000);  // Durasi jumpscare 8 detik
     } else {
         if (guess === currentSide) {
             message.textContent = "Selamat kamu benar!";
