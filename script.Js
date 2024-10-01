@@ -77,3 +77,38 @@ function checkGuess(guess) {
         }
     }
 }
+
+// Ganti fungsi auto-play background audio
+window.addEventListener('load', function() {
+    const audio = document.getElementById('background-audio');
+    const playPromise = audio.play();
+
+    if (playPromise !== undefined) {
+        playPromise.then(_ => {
+            // Autoplay berhasil
+            console.log('Autoplay berhasil');
+        }).catch(error => {
+            // Autoplay tidak diizinkan
+            console.log('Autoplay tidak diizinkan: ' + error);
+            // Tambahkan tombol untuk memulai audio secara manual
+            createPlayButton();
+        });
+    }
+});
+
+function createPlayButton() {
+    const playButton = document.createElement('button');
+    playButton.textContent = 'Putar Musik';
+    playButton.style.position = 'fixed';
+    playButton.style.bottom = '20px';
+    playButton.style.right = '20px';
+    playButton.style.zIndex = '1000';
+    
+    playButton.addEventListener('click', function() {
+        const audio = document.getElementById('background-audio');
+        audio.play();
+        this.remove(); // Hapus tombol setelah diklik
+    });
+
+    document.body.appendChild(playButton);
+}
